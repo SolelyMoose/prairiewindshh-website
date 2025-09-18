@@ -1,0 +1,148 @@
+/* Keyframes */
+
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+
+:root {
+    --Dominant: #ffffff;
+    --DominantShade: #c4bba5;
+    --Complementary: #468189;
+    --ComplementaryAccent: #3c6f75;
+    --Accent: #021018;
+    --MainFont: Inter, sans-serif;
+    --AccentFont: Didot, serif
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: var(--MainFont);
+    font-weight: 500;
+}
+
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+    background-color: var(--Dominant);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 50vh;
+    gap: 24px;
+}
+
+img {
+    border-radius: 8px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1%;
+    background-color: var(--Complementary);
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-top: 50vh;
+    width: 100%;
+    padding: 1%;
+    background-color: var(--Accent);
+    color: white;
+}
+
+.backgroundImage {
+  width: 100%;
+  height: auto;
+  display: block; /* removes inline gap under images */
+}
+
+.main {
+    position: relative;
+}
+
+.floatingText {
+  position: absolute;
+  top: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 12px;
+  text-align: center;
+  animation: fade-up 0.5s ease-in-out;
+}
+
+.AccentText {
+    font-family: var(--AccentFont);
+    font-style: italic;
+}
+
+.button {
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 8px;
+  color: black;
+  border: 2px solid transparent; /* default border */
+}
+
+/* Filled button */
+.button--filled {
+  background-color: var(--ComplementaryAccent);
+  border-style: none;
+}
+
+/* Outline button */
+.button--outline {
+  background-color: transparent;
+  border-color: var(--ComplementaryAccent);
+}
+
+.button:hover {
+    background-color: #3f757a;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.services {
+    display: flex;
+    flex-direction: row;
+    gap: 2vh;
+}
+
+.serviceIcon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: var(--DominantShade);
+}
