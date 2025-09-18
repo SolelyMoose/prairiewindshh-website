@@ -14,10 +14,9 @@
 
 :root {
     --Dominant: #ffffff;
-    --DominantShade: #cecece;
-    --Complementary: #468189;
-    --ComplementaryAccent: #3c6f75;
-    --Accent: #021018;
+    --Complementary: #88caef;
+    --ComplementaryAccent: #7bb6d8;
+    --Muted: #3d3d3d;
     --MainFont: Inter, sans-serif;
     --AccentFont: Didot, serif
 }
@@ -47,11 +46,7 @@ section {
     align-items: center;
     justify-content: center;
     width: 100%;
-    min-height: 50vh;
-}
-
-img {
-    border-radius: 8px;
+    min-height: 40vh;
 }
 
 .header {
@@ -95,7 +90,6 @@ img {
 
   gap: 12px;
   text-align: center;
-  animation: fade-up 0.5s ease-in-out;
 }
 
 .AccentText {
@@ -124,7 +118,7 @@ img {
 }
 
 .button:hover {
-    background-color: #3f757a;
+    background-color: #6da3c2;
     text-decoration: underline;
     cursor: pointer;
 }
@@ -145,7 +139,7 @@ img {
     padding: 8px;
     padding-left: 0px;
     padding-right: 0px;
-    background-color: var(--DominantShade);
+    background-color: var(--ComplementaryAccent);
     border-radius: 8px;
 }
 
@@ -154,4 +148,5 @@ img {
     height: 30%;
     box-sizing: border-box;
     text-align: center;
+    color: var(--Muted);
 }
